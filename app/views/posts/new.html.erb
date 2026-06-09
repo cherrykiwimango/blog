@@ -1,8 +1,9 @@
 <% content_for :title, "New post" %>
 
-<%= render "header", title:"New Blog"%>
-<%= render "form", post: @post %>
-
+<%= render "header", title:"New Blog", subtitle: "The C in CRUD operations"%>
+<div class="mt-5">
+  <%= render "form", post: @post %>
+</div>
 <br>
 
 <div>

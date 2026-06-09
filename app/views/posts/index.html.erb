@@ -2,14 +2,12 @@
 
 <% content_for :title, "Posts" %>
 
-<%= render "header", title:"Allen's Blog"%>
-<p class="text-xs font-extralight mb-5 text-left">Expert in yappological sciences</p>
-
+<%= render "header", title:"Allen's Blog", subtitle: "Expert in yappological sciences"%>
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
   <% end %>
 </div>
-<p class="underline font-extralight text-xs mt-10 text-cyan-300">
+<p class="underline font-extralight text-sm mt-10 text-cyan-300">
   Use the browser url tab to nagivate: /new 
 </p>

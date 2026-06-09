@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @layer base {
   body {
-    font-family: "Roboto Mono";
+    font-family: monospace;
     background-color: hsl(200, 10%, 18%);
     color: white;
   }

@@ -1,9 +1,9 @@
-<div class="mb-3" id="<%= dom_id post %>">
+<div class="mb-5" id="<%= dom_id post %>">
   <div>
-    <strong class="text-amber-500 underline font-semibold text-sm"><%= link_to post.title, post %></strong>
-    <span class="text-xs font-light italic"><%= post.created_at.strftime("%B %d, %Y") %></span>
+    <strong class="text-amber-500 underline font-semibold text-xl"><%= link_to post.title, post %></strong>
+    <span class="text-base font-light italic"><%= post.created_at.strftime("%B %d, %Y") %></span>
   </div>
   <div>
-    <span class="text-xs font-light"><%= post.subtitle %></span>
+    <span class="text-sm font-light"><%= post.subtitle %></span>
   </div>
 </div>
