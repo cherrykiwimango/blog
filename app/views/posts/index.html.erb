@@ -2,15 +2,16 @@
 
 <% content_for :title, "Posts" %>
 
-<h1>Posts</h1>
+<h1 class="text-3xl font-bold">Posts</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
-    <p>
+    <p class="text-amber-500 underline font-semibold">
       <%= link_to "Show this post", post %>
     </p>
   <% end %>
 </div>
-
+<p class="text-cyan-600 underline font-semibold">
 <%= link_to "New post", new_post_path %>
+</p>
