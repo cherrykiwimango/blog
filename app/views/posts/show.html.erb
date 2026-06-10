@@ -2,7 +2,9 @@
 
 <%= render @post %>
 <hr class="mb-5">
-<p><%= @post.body %></p>
+<article class="prose prose-sm dark:prose-invert">
+  <%= parse_markdown(@post.body) %>
+</article>
 <hr class="mt-5">
 <div class="mt-10">
   <%= link_to "Edit this post", edit_post_path(@post), class: "text-amber-500 font-semibold" %> | 
