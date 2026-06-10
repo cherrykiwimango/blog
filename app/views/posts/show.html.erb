@@ -1,11 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-green-400"><%= notice %></p>
 
 <%= render @post, title_classes: "text-2xl", subtitle_classes: "text-base mt-3" %>
-<hr class="mb-5">
-<article class="prose prose-xl dark:prose-invert">
+<hr class="h-px border border-gray-500 mb-5">
+<article class="prose prose-lg dark:prose-invert">
   <%= parse_markdown(@post.body) %>
 </article>
-<hr class="mt-5">
+<%# <hr class="mt-5"> %>
 
 
 <%= button_to "Delete this post", 
