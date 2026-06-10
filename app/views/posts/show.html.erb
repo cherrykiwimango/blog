@@ -6,11 +6,11 @@
   <%= parse_markdown(@post.body) %>
 </article>
 <hr class="mt-5">
-<div class="mt-10">
-  <%= link_to "Edit this post", edit_post_path(@post), class: "text-amber-500 font-semibold" %> | 
-  <%= link_to "Back to posts", posts_path, class: "text-cyan-400 font-semibold" %>
+<%# <div class="mt-10"> %>
+  <%# <%= link_to "Edit this post", edit_post_path(@post), class: "text-amber-500 font-semibold" %> 
+  <%# <%= link_to "Back to posts", posts_path, class: "text-cyan-400 font-semibold" %> 
 
-  <div class="mt-5">
-    <span class="text-red-400 font-black text-base"><%= button_to "Destroy this post", @post, method: :delete, class: "border border-red-400 px-2 py-1 rounded-sm" %></span>
-  </div>
-</div>
+  <%# <div class="mt-5"> %>
+    <%# <span class="text-red-400 font-black text-base"><%= button_to "Destroy this post", @post, method: :delete, class: "border border-red-400 px-2 py-1 rounded-sm" %>
+  <%# </div> %>
+<%# </div> %>
