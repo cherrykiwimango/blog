@@ -1,9 +1,9 @@
+<% title_classes ||= "text-xl"%>
+<% subtitle_classes ||= "text-sm"%>
 <div class="mb-5" id="<%= dom_id post %>">
   <div>
-    <strong class="text-amber-500 underline font-semibold text-xl"><%= link_to post.title, post %></strong>
+    <strong class="text-amber-500 underline font-semibold <%= title_classes %>"><%= link_to post.title, post %></strong>
     <span class="text-base font-light italic"><%= post.created_at.strftime("%B %d, %Y") %></span>
   </div>
-  <div>
-    <span class="text-sm font-light"><%= post.subtitle %></span>
-  </div>
+  <div class="font-light <%= subtitle_classes %>"><%= post.subtitle %></div>
 </div>

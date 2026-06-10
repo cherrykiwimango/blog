@@ -1,16 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<%= render @post, title_classes: "text-2xl", subtitle_classes: "text-base mt-3" %>
 <hr class="mb-5">
-<article class="prose prose-sm dark:prose-invert">
+<article class="prose prose-xl dark:prose-invert">
   <%= parse_markdown(@post.body) %>
 </article>
 <hr class="mt-5">
-<%# <div class="mt-10"> %>
-  <%# <%= link_to "Edit this post", edit_post_path(@post), class: "text-amber-500 font-semibold" %> 
-  <%# <%= link_to "Back to posts", posts_path, class: "text-cyan-400 font-semibold" %> 
 
-  <%# <div class="mt-5"> %>
-    <%# <span class="text-red-400 font-black text-base"><%= button_to "Destroy this post", @post, method: :delete, class: "border border-red-400 px-2 py-1 rounded-sm" %>
-  <%# </div> %>
-<%# </div> %>
+
+<%= button_to "Delete this post", 
+  post_path(@post), 
+  method: :delete, 
+  data: {turbo_confirm: "Are you sure?"}, 
+  class: "mt-5 underline text-red-400 text-sm" if authenticated?
+%>

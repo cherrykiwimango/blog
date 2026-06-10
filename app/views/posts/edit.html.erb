@@ -1,11 +1,11 @@
 <% content_for :title, "Editing post" %>
 
-<%= render "header", title: "Edit Post", subtitle: "The U in CRUD operations"%>
+<%= render "header", title: "Edit Post", subtitle: "Edit your blog entry"%>
 <%= render "form", post: @post %>
 
 <br>
 
 <div>
-  <%= link_to "Show this post", @post, class: "text-amber-500 font-semibold" %> |
-  <%= link_to "Back to posts", posts_path, class: "text-cyan-400 font-semibold" %>
+  <%# <%= link_to "Show this post", @post, class: "text-amber-500 font-semibold" %> 
+  <%# <%= link_to "Back to posts", posts_path, class: "text-cyan-400 font-semibold" %> 
 </div>

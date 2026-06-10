@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="text-[17.6px]">
   <head>
     <title><%= content_for(:title) || "Blog" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,15 +29,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="mx-10 my-5">
-    <nav class="flex flex-row gap-6 mx-10">
+  <body class="min-h-screen flex flex-col">
+    <nav class="flex flex-row gap-6 mx-10 justify-end my-5 sticky top-5 z-50">
       <%= link_to "Home", root_path, class: "underline text-cyan-500 font-semibold" %>
       <%= button_to "Log out", session_path, class: "underline text-red-400 font-semibold", method: :delete if authenticated? %>
+      <%= link_to "Login", new_session_path, class: "underline text-amber-500 font-semibold" unless authenticated?%>
     </nav>
-    <main class="max-w-2xl mx-auto mt-15 px-4 flex flex-col items-center">
+    <main class="min-w-2xl mx-auto mt-10 px-4 flex flex-1 flex-col items-center">
       <div class="w-full text-left">
         <%= yield %>
       </div>
     </main>
+    <footer class="text-sm text-gray-500 items-center flex flex-col mt-10 mb-5">
+  ©   <%= Time.current.year %> Built with Ruby on Rails. Allen Saju.
+    </footer>
   </body>
 </html>
