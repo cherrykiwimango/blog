@@ -87,9 +87,10 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: blog_production
-    username: blog
-    password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DATABASE_URL"] %>
+    database: defaultdb 
+    username: avnadmin
+    # password: <%= ENV["DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
     database: blog_production_cache
