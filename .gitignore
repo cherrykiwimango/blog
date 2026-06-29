@@ -40,3 +40,4 @@
 node_modules
 secrets
 feature-ideas
+/config/sslcertificate/ca.pem
