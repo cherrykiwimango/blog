@@ -87,5 +87,5 @@ production:
   primary: &primary_production
     <<: *default
     url: <%= ENV["DATABASE_URL"] %>
-    sslmode: required
+    sslmode: require
     sslrootcert: <%= ENV["PGSSLCERT"] %>
