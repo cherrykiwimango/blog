@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  # GET /posts/1 or /posts/1.json
+  # GET /posts/:slug or /posts/:slug.json
   def show
   end
 
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  # GET /posts/1/edit
+  # GET /posts/:slug/edit
   def edit
   end
 
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1 or /posts/1.json
+  # PATCH/PUT /posts/:slug or /posts/:slug.json
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1 or /posts/1.json
+  # DELETE /posts/:slug or /posts/:slug.json
   def destroy
     @post.destroy!
 
@@ -61,7 +61,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params.expect(:id))
+      @post = Post.find_by!(slug: params[:slug])
     end
 
     # Only allow a list of trusted parameters through.
