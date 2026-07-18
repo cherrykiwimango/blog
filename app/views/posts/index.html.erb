@@ -1,8 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Posts" %>
+<% content_for :title, "landing-page" %>
 
-<%= render "header", title:"Allen's Blog", subtitle: "Expert in yappological sciences"%>
+<div class="align-center text-center mb-15">
+  <p class="text-lg mb-8">Hi, you've reached my <span class="font-bold"> personal-website/blog</span></p>
+  <div class="flex flex-row justify-between gap-10 mb-5">
+    <%= image_tag "wmremove-transformed.png", class:"w-1/8 h-1/8 aspect-square object-cover rounded-full" %>
+    <p>I'm <span class="font-bold text-amber-500">Allen Saju</span>, a CS grad and software engineer. I'm trying to break into the low-level tech world one step at a time. I write about whatever I find interesting.</p>
+  </div>
+  <p class="text-cyan-500 text-left mb-1">Here are some links:</p>
+  <div class="flex flex-row gap-5">
+    <%= link_to "GitHub", "https://github.com/cherrykiwimango", target: "_blank", class: "text-base font-bold text-purple-400 underline" %>
+    <%= link_to "LinkedIn", "https://www.linkedin.com/in/allen-saju/", target: "_blank", class: "text-base font-bold text-blue-400 underline" %>
+    <%= mail_to "allensaju73@gmail.com", "Email", class: "text-base font-bold text-green-500 underline" %>
+  </div>
+</div>
+
+<p class="font-bold text-xl text-left mb-8">Here are some things I wrote:</p>
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post%>
